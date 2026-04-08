@@ -10,7 +10,6 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import coil.compose.rememberImagePainter
-import com.example.themoviedatabaseapp.BuildConfig
 import com.example.themoviedatabaseapp.R
 
 @Composable

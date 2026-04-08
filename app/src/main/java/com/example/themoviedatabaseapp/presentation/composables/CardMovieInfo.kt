@@ -1,7 +1,6 @@
 package com.example.themoviedatabaseapp.presentation.composables
 
 import android.content.Intent
-import android.net.Uri
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -16,12 +15,13 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import androidx.core.net.toUri
 import com.example.themoviedatabaseapp.R
 
 @Composable
 fun CardMovieInfo(url: String, releaseDate: String){
     val context = LocalContext.current
-    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+    val intent = Intent(Intent.ACTION_VIEW, url.toUri())
 
     Row (verticalAlignment = Alignment.CenterVertically) {
         Text(

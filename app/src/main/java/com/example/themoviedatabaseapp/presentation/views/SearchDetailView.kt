@@ -24,7 +24,7 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import com.example.themoviedatabaseapp.R
 import com.example.themoviedatabaseapp.core.Constants.Companion.NAV_DETAIL_VIEW
 import com.example.themoviedatabaseapp.presentation.composables.MovieCard
-import com.example.themoviedatabaseapp.presentation.composables.ShimmerResults
+import com.example.themoviedatabaseapp.presentation.composables.ShimmerDetailsResults
 import com.example.themoviedatabaseapp.presentation.viewmodel.MoviesViewModel
 
 @Composable
@@ -58,7 +58,7 @@ fun SearchDetailView(
                 }
             }
             is LoadState.Loading -> {
-                ShimmerResults()
+                ShimmerDetailsResults()
             }
             else -> {
                 if (searchResults.itemCount == 0){
